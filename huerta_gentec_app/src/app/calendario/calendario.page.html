@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar class="toolbar-calend">
+    <ion-button slot="start"  color="clear" class="boton-calend" (click)="backHome()">
+      <ion-icon name="arrow-back-outline" class="salir-calend"></ion-icon>
+    </ion-button>
+    <ion-title class="titulo-calend">CALENDARIO</ion-title>
+    <!--<img class="usuario-calend" alt="usuario" src="assets/imgs/usuario.png">-->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="superior-calend">
+    <ion-row>
+      <ion-col size="2"> <!--PRUEBA DE COLUMNAS Y FILAS, VER COMO QUEDA VS LOS PORCENTAJES-->
+        <ion-button fill="clear" (click)="backCalend()">
+          <ion-icon name="arrow-back-outline" slot="icon-only" color="dark"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="8" class="ion-text-center">
+        <h3>{{ vistaTitle }}</h3>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button (click)="nextCalend()" fill="clear" class="boton-calend">
+          <ion-icon name="arrow-forward" slot="icon-only" color="dark"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <calendar
+    [eventSource]="eventSource"
+    [calendarMode]="calendar.mode"
+    [currentDate]="calendar.currentDate"
+    (onTitleChanged)="tituloMeses($event)"
+    ></calendar>
+  </div>
+  <div class="inferior-calend">
+    <div class="carteles-inferior">
+      <div class="cartel-data">
+        <h2 id="datos-calendar">NO DATA</h2>
+      </div>
+      <div class="cartel-tarea">
+        <h2 id="tareas-calendar">NO TAREA</h2>
+      </div>
+    </div>
+    <div class="añadir-calend">
+      <ion-button class="boton-añadir" (click)="newCalend()">
+        <ion-icon name="add" class="icon-add"></ion-icon>
+      </ion-button>
+      <div class="añadir-color">
+        <h3>AÑADIR EVENTO</h3>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+<ion-footer>
+
+</ion-footer>

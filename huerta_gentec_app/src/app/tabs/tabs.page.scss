@@ -1,0 +1,22 @@
+ion-tab-bar{
+    --background: rgb(22, 160, 69);
+}
+
+ion-icon{
+    font-size:30px;
+}
+
+/*ion-icon{
+    &[class*="custom-"]{
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
+    &[class*="custom-planty"]{
+        mask-image: url(../assets/logosinfondo.png);
+    }
+}
+*/

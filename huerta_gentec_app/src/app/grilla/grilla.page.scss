@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Denk+One&display=swap');
+
+.grilla-superior{
+    height: 20%;
+    background-color: rgb(204, 231, 163);
+}
+
+.col-der{
+    position: relative;
+    img{
+        position: absolute;
+        bottom: 5%;
+        left:20%;
+        height: 120px;
+    }
+}
+
+.col-izq{
+    position: relative;
+}
+
+.titulo-plant{
+    color: rgb(22, 160, 69);
+    position: absolute;
+    top:10%;
+    margin: 0px !important;
+    font-family: 'Denk One', sans-serif;
+    left:12%;
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: 8px;
+}
+
+.imagenes-grilla1{
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    height: 50%;
+    bottom: 0%;
+    left:12%;
+    img{
+        height: 48px;
+        padding:1px;
+    }
+}
+.imagenes-grilla2{
+    flex: 25%;
+}
+
+.grilla-media{
+    height: 8%;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+ion-card{
+    border:0.25px solid rgb(138, 138, 138);
+    //box-shadow: 1px 1px 1px 0.5px rgb(138, 138, 138);
+    img{
+        padding:10px;
+    }
+}
+ion-card-header{
+    background-color: rgb(204, 231, 163);
+    label{
+        font-family: monospace;
+        font-size: 25px;
+        font-weight: 700;
+        width: 100%;
+        color:rgb(22, 160, 69);
+        text-align: center;
+    }
+}
+
+.titulo-card{
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: 700;
+    width: 100%;
+    color:rgb(22, 160, 69);
+    text-align: center;
+}

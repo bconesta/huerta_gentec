@@ -1,0 +1,7 @@
+{
+  "name": "miplanty",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

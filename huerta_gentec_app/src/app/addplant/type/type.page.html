@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar class="toolbar-home">
+    <ion-buttons slot="start">
+      <ion-button color="light" (click)="back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title class="toolbar-logo"><img style="height: 40px;" alt="logo" src="../../../assets/imgs/logo_sinfondo.png"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h4>Añadir nueva planta</h4>
+  <ion-item class="nombre">
+    <ion-label position="floating">Nombre de la planta</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item class="tipo">
+    <ion-label position="floating">Tipo de planta</ion-label>
+    <ion-input id="planttype" value="" readonly></ion-input>
+    <button (click)="presentModal()">Seleccionar</button>
+  </ion-item>
+
+  <div class="boton_centrado">
+    <button class="ingresar-b" (click)="next()">Siguiente</button>
+  </div>
+</ion-content>

@@ -1,0 +1,60 @@
+.boton-settings{
+    --box-shadow: none;
+}
+
+.toolbar-settings{
+    --background:rgb(177, 248, 138);
+    height: 60px;
+    position: relative;
+    display: flex;
+    text-align: center;
+}
+
+.salir-settings{
+    position: absolute;
+    left: 2%;
+    top:25%;
+    color:black;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.titulo-settings{
+    color:black;
+    font-weight: 700;
+    font-size: 25px;
+    font-family:monospace;
+}
+
+.subtitulo-settings{
+    padding-left: 20px;
+    font-family: monospace;
+    color:rgb(39, 38, 37);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.subtitulo2-settings{
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family: monospace;
+    color:rgb(39, 38, 37);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.item-settings{
+    color:rgb(39, 38, 37);
+    font-family: monospace;
+}
+
+.icon-settings{
+    color: rgb(22, 160, 69);
+    font-size: 25px;
+    padding-right: 5px;
+}
+
+.boton-logout{
+    --box-shadow: none;
+    width: 100%;
+}

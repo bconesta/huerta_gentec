@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar class="toolbar-home">
+    <ion-buttons slot="start" class="salir-home">
+      <ion-button (click)="back()" color="light">{{logout}}</ion-button>
+    </ion-buttons>
+    <ion-title class="toolbar-logo"><img style="height: 40px;" alt="logo" src="assets/imgs/logo_sinfondo.png"></ion-title>
+    <ion-buttons slot="end" class="toolbar-mas"> 
+      <ion-button (click)="new()"><ion-icon color="light" name="add-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="superior-home">
+    <ion-button class="boton-i" fill="clear" (click)="changeImgI()">
+      <ion-icon name="caret-back" class="flechas-home"></ion-icon>
+    </ion-button>
+    <img [src]="imgcentro" alt="planta">
+    <ion-button class="boton-d" fill="clear" (click)="changeImgD()">
+      <ion-icon name="caret-forward" class="flechas-home"></ion-icon>
+    </ion-button>
+    <p class="nombre-planta">
+      <label> {{textplanta}}</label>
+    </p>
+  </div>
+  <div class="inferior">
+    <div class="agua-barra">
+      <ion-icon id="icono_agua" name="water" color="secondary"></ion-icon>
+      <ion-progress-bar class="barra-home" color="secondary" id="humedad"></ion-progress-bar>
+      <p class="numero-barra" id="humedadtext"></p>
+    </div>
+    <div class="luz-barra">
+      <ion-icon id="icono_sol" name="sunny" color="warning"></ion-icon>
+      <ion-progress-bar class="barra-home" color="warning" id="luz"></ion-progress-bar>
+      <p class="numero-barra" id="luztext"></p>
+    </div>
+    <div class="temp-barra">
+      <ion-icon id="icono_temp" name="thermometer" color="danger"></ion-icon>
+      <ion-progress-bar class="barra-home" color="danger" id="temperatura"></ion-progress-bar>
+      <p class="numero-barra" id="temperaturatext"></p>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>

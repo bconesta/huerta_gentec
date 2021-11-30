@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar class="toolbar-home">
+    <ion-buttons class="boton-atras" slot="start">
+      <ion-button color="light" (click)="back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Conectar planta</ion-title>
+    <ion-buttons class="boton-cerrar" slot="end">
+      <ion-button color="light" (click)="close()"><ion-icon name="close-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="texto" id="textoo">
+    <h1 style="text-align: center;">¡Genial!</h1>
+    <h4 style="text-align: center;">
+      Es hora de conectarnos con tu nueva Planty. <br> <br>
+      Para esto, debes emparejarte mediante Bluetooth.    
+    </h4>
+    <button (click)="opbt()">Emparejar</button>
+    <h4 style="text-align: center;">Si ya lo estas, toca el boton "Siguiente".</h4>
+  </div>
+
+
+  <div class="boton_centrado" id="boton_sig">
+    <button class="ingresar-b" (click)="next()">Siguiente</button>
+  </div>
+  
+  <div id="seg" style="display: none;">
+    <ion-item class="nombre">
+      <ion-label position="floating">SSID</ion-label>
+      <ion-input [(ngModel)]="SSID"></ion-input>
+    </ion-item>
+    <div class="boton_centrado">
+      <button class="ingresar-b" (click)="sendSSID()">Enviar SSID</button>
+    </div>
+  </div>
+
+  <div id="ter" style="display: none;">
+    <ion-item class="nombre">
+      <ion-label position="floating">PASS</ion-label>
+      <ion-input [(ngModel)]="pass"></ion-input>
+    </ion-item>
+    <div class="boton_centrado">
+      <button class="ingresar-b" (click)="sendPASS()">Enviar PASS</button>
+    </div>
+  </div>
+
+  <div id="wifi-scan" style="display: none;">
+    <h4>Seleccione la red WiFi</h4>
+    <ion-card style="height: 40%;" *ngFor="let data of Devices">
+      <ion-item (click)="setSSID(data.SSID)">
+        <ion-label>{{data.SSID}}</ion-label>
+        <ion-progress-bar value="{{data.level}}" slot="end" style="width: 30%;"></ion-progress-bar>
+      </ion-item>
+    </ion-card>
+    <div class="list-buttons">
+      <button (click)="scannerWifi()">Escanear</button>
+      <button (click)="setManually()">Introducir manualmente</button>
+    </div>    
+  </div>
+
+  <div style="display: none;" id="set-pass">
+    <h3 style="text-align: center; font-weight: bold;">{{SSID}}</h3>
+    <ion-item class="nombre">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="pass"></ion-input>
+    </ion-item>
+    <div class="boton_centrado">
+      <button class="ingresar-b" (click)="sendData()">Conectar</button>
+    </div>
+    <h2>{{inf}}</h2>
+  </div>
+
+  <div id="set-manually" style="display: none;">
+    <h4>Complete los datos</h4>
+    <ion-item class="nombre">
+      <ion-label position="floating">SSID</ion-label>
+      <ion-input [(ngModel)]="SSID"></ion-input>
+    </ion-item>
+    <ion-item class="nombre">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="pass"></ion-input>
+    </ion-item>
+    <div class="boton_centrado">
+      <button class="ingresar-b" (click)="sendData()">Conectar</button>
+    </div>
+  </div>
+  
+</ion-content>

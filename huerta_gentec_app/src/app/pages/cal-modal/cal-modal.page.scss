@@ -1,0 +1,14 @@
+:host ::ng-deep{
+    .event-detail-container{
+        display: none; //quitar lo extra del modal "evento"
+    }
+
+    .monthview-container{
+        height: auto !important; //son clases ya definidas por el modulo del calendario
+    }
+}
+
+.titulo-modal{
+    text-align: center;
+}
+

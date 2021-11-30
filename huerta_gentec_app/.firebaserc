@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mi-planty": {
+      "hosting": {
+        "app": [
+          "mi-planty"
+        ]
+      }
+    }
+  }
+}

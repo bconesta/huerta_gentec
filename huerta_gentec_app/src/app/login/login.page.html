@@ -1,0 +1,43 @@
+<!--
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+
+<ion-content>
+  <div class="header"></div>
+  <!--<div class="header2"></div>-->
+  <div class="logo">
+    <img src="../../assets/imgs/logi.PNG" alt="logo_miplanty">
+  </div>
+  <div class="principal">
+    <!--<ion-item class="mailicon" color="light">
+      <ion-icon name="person" class="userIcon"></ion-icon>
+    </ion-item>-->
+    <ion-icon name="person" class="mailicon"></ion-icon>
+    <ion-item class="mail">
+      <ion-label class="inputlogin"  position="floating">{{userlabel}}</ion-label>
+      <ion-input class="inputlogin" [(ngModel)]=user></ion-input>
+    </ion-item>
+
+    <ion-icon name="lock-closed" class="passIcon"></ion-icon>
+    <ion-item class="contra">
+      <ion-label class="inputlogin" position="floating">{{passlabel}}</ion-label>
+      <ion-input class="inputlogin" [(ngModel)]=password id="passId" type="password"></ion-input>
+      <ion-icon id="seeIcon" name="eye-outline" (click)="showPass()"></ion-icon>
+    </ion-item>
+    
+  </div>
+  <div class="boton_centrado">
+    <button class="ingresar-b"(click)="log_in()">{{loginlabel}}</button>
+    <a (click)="forpass()">{{fplabel}}</a>
+    <a (click)="register()">{{reglabel}}</a>
+  </div>
+  <!--<div style="text-align: center;">
+    <h1 id="texto">HOLA</h1>
+  </div>
+-->
+  <div class="footer"></div>
+</ion-content>

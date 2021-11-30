@@ -1,0 +1,133 @@
+.toolbar-home {
+    --background:rgb(22, 160, 69);
+    height: 60px;
+    position: relative;
+  }
+
+.salir-home{
+    position: absolute;
+    left: 2%;
+    top:25%;
+    ion-button{
+        font-size: 20px;
+        font-family:monospace;
+        font-weight:500;
+    }
+}
+
+.toolbar-logo{
+    position: absolute;
+    top:18%;
+    left:41%;
+}
+
+.toolbar-mas{
+    position: absolute;
+    right: 2%;
+    top:25%;
+    ion-button{
+        font-size: larger;
+        font-weight: bold;
+    }
+}
+
+ion-icon{
+    color:black;
+  }
+
+.superior-home{
+    position: relative;
+    height: 50%;
+    text-align: center;
+    img{
+        height: 60%;
+        width: auto;
+        margin-top: 8%;
+        border:1px solid rgb(180, 180, 180);
+        border-radius: 60%;
+    }
+}
+
+.boton-i{
+    position: absolute;
+    top:15%;
+    left: 0;
+    height: 50%;
+    --padding-start:0;
+}
+
+.boton-d{
+    position: absolute;
+    top:15%;
+    right: 0;
+    height: 50%;
+    --padding-end:0;
+}
+
+.flechas-home{
+    color:rgb(22, 160, 69);
+    font-size: 120px;
+}
+
+.nombre-planta{
+    margin:15px 0px 25px 0px;
+    font-size: 30px;
+    font-weight:bold;
+    font-family:monospace;
+}
+
+.inferior{
+    height: 50%;
+}
+
+.barra-home{
+    position: absolute;
+    left:10%;
+    top:45%;
+    height: 10px;
+    width: 60%;
+}
+
+.numero-barra{
+    position: absolute;
+    right:10%;
+    font-size: 25px;
+    top:35%;
+    margin: 0;
+}
+
+.agua-barra{
+    position:relative;
+    height: 33%;
+    ion-icon{
+        position:absolute;
+        left:45%;
+        bottom: 60%;
+        height: 45px;
+        width: 45px;
+    }
+}
+
+.luz-barra{
+    position:relative;
+    height: 33%;
+    ion-icon{
+        position:absolute;
+        left:45%;
+        bottom: 60%;
+        height: 45px;
+        width: 45px;
+    }
+}
+
+.temp-barra{
+    position:relative;
+    height: 33%;
+    ion-icon{
+        position:absolute;
+        left:45%;
+        bottom: 60%;
+        height: 45px;
+        width: 45px;
+    }
+}

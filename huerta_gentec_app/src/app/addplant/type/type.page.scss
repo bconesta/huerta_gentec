@@ -1,0 +1,54 @@
+.toolbar-home{
+    --background: rgb(22,160,69);
+    height: 60px;
+    position: relative;
+    ion-buttons{
+        position: absolute;
+        left: 2%;
+        top: 25%;
+        ion-button{
+            font-size: 20px;
+            font-family: monospace;
+            font-weight: 500;
+        }
+    }
+    .toolbar-logo{
+        position: absolute;
+        top: 18%;
+        left: 41%;
+    }
+}
+
+h4{
+    font-weight: bold;
+    text-align: center;
+    margin: 10% 0 5%;
+}
+
+.boton_centrado{
+    text-align: center;
+    margin-top: 5%;
+    display: block;
+    button{
+        width: 50%;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #16a045;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+.tipo{
+    position: relative;
+    button{
+        position: absolute;
+        bottom: 0%;
+        right: 2%;
+        padding: 4%;
+        z-index: 10;
+        height: 100%;
+        background-color: white;
+        font-weight: bold;
+    }
+}

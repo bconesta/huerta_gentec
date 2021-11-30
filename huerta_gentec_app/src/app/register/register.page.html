@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar class="toolbar-home">
+    <ion-buttons slot="start" class="salir-home">
+      <ion-button (click)="back()"><ion-icon color="light" name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title class="toolbar-logo"><img style="height: 40px;" alt="logo" src="assets/imgs/logo_sinfondo.png"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <h4 style="font-weight: bold; text-align: center; margin-top: 10%;">{{titulo}}</h4>
+  
+  <div class="container">
+    <ion-item class="mail">
+      <ion-label position="floating">{{namelabel}}</ion-label>
+      <ion-input [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item class="mail">
+      <ion-label position="floating">{{maillabel}}</ion-label>
+      <ion-input [(ngModel)]="mail"></ion-input>
+    </ion-item>
+    <ion-item class="mail">
+      <ion-label position="floating">{{passlabel}}</ion-label>
+      <ion-input [(ngModel)]="pass"></ion-input>
+    </ion-item>
+    <ion-item class="mail">
+      <ion-label position="floating">{{pass2label}}</ion-label>
+      <ion-input [(ngModel)]="pass_con"></ion-input>
+    </ion-item>
+  </div>
+  
+  <div class="boton_centrado">
+    <button class="ingresar-b"(click)="r_send()">{{sendlabel}}</button>
+  </div>
+</ion-content>
+

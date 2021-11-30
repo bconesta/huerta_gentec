@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar class="toolbar-settings">
+    <!--
+    <ion-button slot="start"  color="clear" class="boton-settings" (click)="backHome()">
+      <ion-icon name="arrow-back-outline" class="salir-settings"></ion-icon>
+    </ion-button>-->
+    <ion-title class="titulo-settings">{{header}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="general-settings">
+  <h2 class="subtitulo-settings">{{titulo1}}</h2> 
+  <ion-list>
+    <ion-item class="item-settings">
+      <ion-icon name="globe-outline" class="icon-settings"></ion-icon> 
+      <ion-label>{{label1}}</ion-label>
+      <ion-select (ionChange)="languageChange()" id="selecidioma" placeholder="Seleccione idioma" interface="popover" class="custom-options">
+        <ion-select-option value="español">Español</ion-select-option>
+        <ion-select-option value="ingles">English</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="item-settings">
+      <ion-icon name="lock-closed-outline" class="icon-settings"></ion-icon> 
+      <ion-label>{{label2}}</ion-label>
+    </ion-item>
+    <ion-item class="item-settings">
+      <ion-icon name="trash-outline" class="icon-settings"></ion-icon>
+      <ion-label>{{label3}}</ion-label>
+    </ion-item>
+    <ion-item class="item-settings">
+      <ion-icon name="notifications-outline" class="icon-settings"></ion-icon>
+      <ion-label>{{label4}}</ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+<div class="ayuda-settings">
+  <h2 class="subtitulo2-settings">{{titulo2}}</h2> 
+  <ion-list>
+    <ion-item class="item-settings" (click)="popupAyuda()">
+      <ion-icon name="help-circle-outline" class="icon-settings"></ion-icon> 
+      <ion-label>{{label5}}</ion-label>
+    </ion-item>
+    <ion-item class="item-settings">
+      <ion-icon name="chatbox-ellipses-outline" class="icon-settings"></ion-icon> 
+      <ion-label>{{label6}}</ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+<div class="cuenta-settings">
+  <h2 class="subtitulo2-settings">{{titulo3}}</h2> 
+  <ion-list>
+    <ion-item class="item-settings">
+      <ion-icon name="person-outline" class="icon-settings"></ion-icon> 
+      <ion-label>{{label7}}</ion-label>
+    </ion-item>
+    <ion-item class="item-settings" (click)="logout()">
+      <ion-icon name="log-out-outline" class="icon-settings"></ion-icon>
+      <ion-label>{{label8}}</ion-label>
+    </ion-item>
+    <ion-item class="item-settings">
+      <ion-icon name="moon-outline" class="icon-settings"></ion-icon> 
+      <ion-label>{{label9}}</ion-label>
+      <ion-toggle color="success"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</div>
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>
+
+
