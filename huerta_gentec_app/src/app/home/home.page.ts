@@ -71,21 +71,35 @@ export class HomePage implements OnInit {
 
 
   getPlantys(){
-    this.cantidad = Object.entries(this.plantys).length;
-    this.nombre = Object.entries(this.plantys)[this.selector][0];
-    
-    this.hum = 31.2;
+    this.nombre = "Promedio"
+    this.hum = this.plantys['Slave01'].values.hum;
+    this.hum = this.hum + this.plantys['Slave02'].values.hum;
+    this.hum = this.hum + this.plantys['Slave03'].values.hum;
+    this.hum = this.hum + this.plantys['Slave04'].values.hum;
+    this.hum = this.hum + this.plantys['Slave05'].values.hum;
+    this.hum = this.hum + this.plantys['Slave06'].values.hum;
+    this.hum = this.hum + this.plantys['Slave07'].values.hum;
+    this.hum = this.hum + this.plantys['Slave08'].values.hum;
+    this.hum = this.hum + this.plantys['Slave09'].values.hum;
+    this.hum = this.hum + this.plantys['Master'].values.hum;
+    this.hum = this.hum/10;
     document.getElementById("humedadtext").innerHTML = this.hum.toFixed(1) + "%";
     (document.getElementById("humedad") as any).value  = this.hum/100;
     (document.getElementById("icono_agua") as any).style = "left:" + (0.6*this.hum+5) + "%;";
 
-    this.luz = Object.entries(this.plantys)[this.selector][1]['luz'];
-    document.getElementById("luztext").innerHTML = this.luz.toFixed(1) + "%";
-    (document.getElementById("luz") as any).value  = this.luz/100;
-    (document.getElementById("icono_sol") as any).style = "left:" + (0.6*this.luz+5) + "%;";
-
-    this.temp = Object.entries(this.plantys)[this.selector][1]['temp'];
-    document.getElementById("temperaturatext").innerHTML = ((this.temp * 4095/100)*330/4095).toFixed(0) + "°C";
+    this.nombre = "Promedio"
+    this.temp = this.plantys['Slave01'].values.hum;
+    this.temp = this.temp + this.plantys['Slave02'].values.temp;
+    this.temp = this.temp + this.plantys['Slave03'].values.temp;
+    this.temp = this.temp + this.plantys['Slave04'].values.temp;
+    this.temp = this.temp + this.plantys['Slave05'].values.temp;
+    this.temp = this.temp + this.plantys['Slave06'].values.temp;
+    this.temp = this.temp + this.plantys['Slave07'].values.temp;
+    this.temp = this.temp + this.plantys['Slave08'].values.temp;
+    this.temp = this.temp + this.plantys['Slave09'].values.temp;
+    this.temp = this.temp + this.plantys['Master'].values.temp;
+    this.temp = this.temp/10;
+    document.getElementById("temperaturatext").innerHTML = this.temp.toFixed(1) + "°C";
     (document.getElementById("temperatura") as any).value  = (this.temp+40)/100;
     (document.getElementById("icono_temp") as any).style = "left:" + ((0.6*this.temp+5)+22) + "%;";
 
