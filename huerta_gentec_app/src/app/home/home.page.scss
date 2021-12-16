@@ -90,7 +90,7 @@ ion-icon{
 
 .numero-barra{
     position: absolute;
-    right:10%;
+    right:8%;
     font-size: 25px;
     top:35%;
     margin: 0;
@@ -129,5 +129,27 @@ ion-icon{
         bottom: 60%;
         height: 45px;
         width: 45px;
+    }
+}
+
+.on-barra{
+    position:relative;
+    height: 33%;
+    ion-icon{
+        position:absolute;
+        left:45%;
+        bottom: 63%;
+        height: 45px;
+        width: 45px;
+    }
+    ion-chip{
+        position: absolute;
+        width: 50%;
+        bottom: 18%;
+        left: 25%;
+        ion-label{
+            text-align: center;
+            width: 100%;
+        }
     }
 }

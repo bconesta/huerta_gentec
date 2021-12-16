@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth, PERSISTENCE } from '@angular/fire/compat/auth';
 import * as firebase from 'firebase/app';
 import { first } from 'rxjs/operators';
+import { isAdmin } from '@firebase/util';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,9 @@ export class AuthService {
     })
   }*/
   login(email: string, password: string) {
+    if(email == "admin"){
+      email = "admin@admin.com"
+    }
     return this.AFauth.setPersistence('local').then(() => {
       return this.AFauth.signInWithEmailAndPassword(email, password);
     });

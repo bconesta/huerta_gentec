@@ -1,97 +1,35 @@
-<!--<ion-header>
-  <ion-toolbar>
-    <ion-title>grilla</ion-title>
-    <img>
-    <img>
+<ion-header>
+  <ion-toolbar class="toolbar-home">
+    <ion-title class="toolbar-logo"><img style="height: 50px;" alt="logo" src="assets/imgs/logo.png"></ion-title>
   </ion-toolbar>
-</ion-header>-->
+</ion-header>
 
 <ion-content>
-  <div class="grilla-superior">
-    <ion-grid style="height: 100%;">
-      <ion-row style="height: 100%;">
-        <ion-col size="7" class="col-izq">
-          <h2 class="titulo-plant">PLANTAS</h2>
-          <div class="imagenes-grilla1">
-            <div class="imagenes-grilla2"><img src="../../assets/imgs/vides.png"></div>
-            <div class="imagenes-grilla2"><img src="../../assets/imgs/vides.png"></div>
-            <div class="imagenes-grilla2"><img src="../../assets/imgs/vides.png"></div>
-            <div class="imagenes-grilla2"><img src="../../assets/imgs/vides.png"></div>
-          </div>
-        </ion-col>
-        <ion-col size="5" class="col-der">
-          <img src="../../assets/imgs/logo_sinfondo.png" height="200">
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
-  <hr color="grey" size="3">
+  <h4 style="font-weight: bold; text-align: center; margin-top: 10%;">Definir rangos</h4>
+  
+  <div>
+    <h6 style="font-weight: bold; text-align: center; margin-top: 5%;">Humedad</h6>
+    <ion-item>
+      <ion-range min="0" max="100" step="1" color="secondary" [pin]="true" snaps="true">
+        <ion-icon size="small" slot="start" name="water" color="secondary"></ion-icon>
+        <ion-icon slot="end" name="water" color="secondary"></ion-icon>
+      </ion-range>
+    </ion-item>
 
-  <div class="grilla-media">
-    <ion-buttons>
-      <ion-button fill="solid" color="success" shape="round">POPULAR</ion-button>
-      <ion-button fill="solid" color="success" shape="round">PERSONAL</ion-button>
-      <ion-button fill="solid" color="success" shape="round">TODAS</ion-button>
-    </ion-buttons>
-  </div>
-  <div class="grilla-inferior">
-   <ion-grid>
-     <ion-row class="one" #one>
-       <ion-col>
-        <ion-card>
-          <img src="../../assets/imgs/phomeCACTUS.png">
-          <ion-card-header>
-            <ion-card-title class="titulo-card"><label> {{nombregrilla}}</label></ion-card-title>
-          </ion-card-header>
-        </ion-card>
-       </ion-col>
-       <!--
-       <ion-col>
-        <ion-card>
-          <img src="../../assets/imgs/phomeCENTRAL.png">
-          <ion-card-header>
-            <ion-card-title class="titulo-card"><label> {{nombregrilla}}</label></ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-     </ion-row>
-     <ion-row class="segunda-fila">
-      <ion-col>
-        <ion-card>
-          <img src="../../assets/imgs/phomeLUZ.png">
-          <ion-card-header>
-            <ion-card-title class="titulo-card"><label> {{nombregrilla}}</label></ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card>
-          <img src="../../assets/imgs/phomeSOMBRA.png">
-          <ion-card-header>
-            <ion-card-title class="titulo-card"><label> {{nombregrilla}}</label></ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-    <ion-row class="tercera-fila">
-      <ion-col>
-        <ion-card>
-          <img src="../../assets/imgs/phomeX.png">
-          <ion-card-header>
-            <ion-card-title class="titulo-card"><label> {{nombregrilla}}</label></ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card>
-          <img src="../../assets/imgs/phomeX2.png">
-          <ion-card-header>
-            <ion-card-title class="titulo-card"><label> {{nombregrilla}}</label></ion-card-title>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      -->
-    </ion-row>
-   </ion-grid> 
+    <h6 style="font-weight: bold; text-align: center; margin-top: 5%;">Temperatura</h6>
+    <ion-item>
+      <ion-range min="20" max="40" step="1" color="danger" [pin]="true" snaps="true">
+        <ion-icon size="small" slot="start" name="thermometer" color="danger"></ion-icon>
+        <ion-icon slot="end" name="thermometer" color="danger"></ion-icon>
+      </ion-range>
+    </ion-item>
+    
+    <h6 style="font-weight: bold; text-align: center; margin-top: 5%;">Cantidad minima</h6>
+    <ion-item>
+      <ion-range min="1" max="10" step="1" color="success" [pin]="true" snaps="true">
+        <ion-icon size="small" slot="start" name="leaf" color="success"></ion-icon>
+        <ion-icon slot="end" name="leaf" color="success"></ion-icon>
+      </ion-range>
+    </ion-item>
   </div>
 </ion-content>

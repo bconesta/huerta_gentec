@@ -88,7 +88,7 @@ export class HomePage implements OnInit {
     (document.getElementById("icono_agua") as any).style = "left:" + (0.6*this.hum+5) + "%;";
 
     this.nombre = "Promedio"
-    this.temp = this.plantys['Slave01'].values.hum;
+    this.temp = this.plantys['Slave01'].values.temp;
     this.temp = this.temp + this.plantys['Slave02'].values.temp;
     this.temp = this.temp + this.plantys['Slave03'].values.temp;
     this.temp = this.temp + this.plantys['Slave04'].values.temp;
@@ -103,12 +103,20 @@ export class HomePage implements OnInit {
     (document.getElementById("temperatura") as any).value  = (this.temp+40)/100;
     (document.getElementById("icono_temp") as any).style = "left:" + ((0.6*this.temp+5)+22) + "%;";
 
+    if(this.plantys['Slave01'].en == true){
+      (document.getElementById("on-chip-id") as any).color = "success";
+      (document.getElementById("on-label-id") as any).color = "success";
+      (document.getElementById("on-label-id") as any).innerHTML = "Encendido";
+    }
+    else{
+      (document.getElementById("on-chip-id") as any).color = "danger";
+      (document.getElementById("on-label-id") as any).color = "danger";
+      (document.getElementById("on-label-id") as any).innerHTML = "Apagado";
+    }
+
     this.textplanta = this.nombre;
   }
-
-
-
-
+/*
   changeImgD(){
     this.selector = this.selector+1;
     if(this.selector>(this.cantidad-1)){
@@ -124,7 +132,7 @@ export class HomePage implements OnInit {
     }
     this.getPlantys();
   }
-  
+*/
 
 
   logout : string;
@@ -138,6 +146,7 @@ export class HomePage implements OnInit {
       this.plantys = snapshot.val();
       this.getPlantys();
     });
+    
     this.logout = this.leng.language[this.leng.value].HomePage.logout;
   }
 }
