@@ -46,7 +46,15 @@ export class LanguageService {
         'label9' : 'Dark Theme'
       },
       'HomePage' : {
-        'logout' : 'EXIT'
+        'logout' : 'EXIT',
+        'stateOn' : 'ON',
+        'stateOff' : 'OFF'
+      },
+      'RangePage' : {
+        'titulo' : 'Define ranges',
+        'label1' : 'Humidity',
+        'label2' : 'Temperature',
+        'label3' : 'Minimum sensors'
       }
     },
     
@@ -87,7 +95,15 @@ export class LanguageService {
         'label9' : 'Tema Oscuro'
       },
       'HomePage' : {
-        'logout' : 'SALIR'
+        'logout' : 'SALIR',
+        'stateOn' : 'Encendido',
+        'stateOff' : 'Apagado'
+      },
+      'RangePage' : {
+        'titulo' : 'Definir rangos',
+        'label1' : 'Humedad',
+        'label2' : 'Temperatura',
+        'label3' : 'Cantidad minima'
       }
     }
   }

@@ -106,12 +106,12 @@ export class HomePage implements OnInit {
     if(this.plantys['Slave01'].en == true){
       (document.getElementById("on-chip-id") as any).color = "success";
       (document.getElementById("on-label-id") as any).color = "success";
-      (document.getElementById("on-label-id") as any).innerHTML = "Encendido";
+      (document.getElementById("on-label-id") as any).innerHTML = this.leng.language[this.leng.value].HomePage.stateOn;
     }
     else{
       (document.getElementById("on-chip-id") as any).color = "danger";
       (document.getElementById("on-label-id") as any).color = "danger";
-      (document.getElementById("on-label-id") as any).innerHTML = "Apagado";
+      (document.getElementById("on-label-id") as any).innerHTML = this.leng.language[this.leng.value].HomePage.stateOff;;
     }
 
     this.textplanta = this.nombre;
@@ -136,7 +136,7 @@ export class HomePage implements OnInit {
 
 
   logout : string;
-
+  
   ngOnInit() {
     //this.lenguaje = this.leng.getLanguage();
     this.logout = this.leng.language[this.leng.value].HomePage.logout;
