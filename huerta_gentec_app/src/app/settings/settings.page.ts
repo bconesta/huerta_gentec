@@ -27,8 +27,12 @@ export class SettingsPage implements OnInit {
     this.router.navigate(['']);
   }
 
-  popupAyuda(){
-    alert();
+  info(){
+    this.router.navigate(['/info']);
+  }
+
+  data(){
+    this.router.navigate(['/datos']);
   }
 
   //test git

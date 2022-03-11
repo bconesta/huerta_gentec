@@ -38,7 +38,7 @@ export class LanguageService {
         'label3' : 'Delete',
         'label4' : 'Notifications',
         'titulo2' : 'HELP',
-        'label5' : 'Help',
+        'label5' : 'Creators',
         'label6' : 'Comments',
         'titulo3' : 'ACOUNT',
         'label7' : 'Data',
@@ -55,6 +55,12 @@ export class LanguageService {
         'label1' : 'Humidity',
         'label2' : 'Temperature',
         'label3' : 'Minimum sensors'
+      },
+      'DataPage' : {
+        'titulo' : 'Account data',
+        'label1' : 'E-mail',
+        'label2' : 'Creation date',
+        'label3' : 'Last log in date'
       }
     },
     
@@ -87,11 +93,11 @@ export class LanguageService {
         'label3' : 'Borrar',
         'label4' : 'Notificaciones',
         'titulo2' : 'AYUDA',
-        'label5' : 'Ayuda',
+        'label5' : 'Creadores',
         'label6' : 'Comentarios',
         'titulo3' : 'CUENTA',
         'label7' : 'Datos',
-        'label8' : 'Log Out',
+        'label8' : 'Cerrar sesión',
         'label9' : 'Tema Oscuro'
       },
       'HomePage' : {
@@ -104,6 +110,12 @@ export class LanguageService {
         'label1' : 'Humedad',
         'label2' : 'Temperatura',
         'label3' : 'Cantidad minima'
+      },
+      'DataPage' : {
+        'titulo' : 'Datos de la cuenta',
+        'label1' : 'Correo electrónico',
+        'label2' : 'Fecha de creación',
+        'label3' : 'Último inicio de sesión'
       }
     }
   }

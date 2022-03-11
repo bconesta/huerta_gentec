@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar class="toolbar-home">
+    <ion-buttons slot="start" class="salir-home">
+      <ion-button (click)="back()" style="color: white;"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title class="toolbar-logo"><img style="height: 50px;" alt="logo" src="assets/imgs/logo.png"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-list>
+      <ion-item (click)="linkedin('bruno')">
+        <img src="../../../assets/imgs/bruno.png" alt="">
+        <ion-label>Bruno Conesta</ion-label>
+      </ion-item>
+      <ion-item (click)="linkedin('anto')">
+        <img src="../../../assets/imgs/anto.png" alt="">
+        <ion-label>Antonella De Cia</ion-label>
+      </ion-item>
+      <ion-item (click)="linkedin('wally')">
+        <img src="../../../assets/imgs/wally.png" alt="">
+        <ion-label>Walter Herrera</ion-label>
+      </ion-item>
+      <ion-item (click)="linkedin('nico')">
+        <img src="../../../assets/imgs/nico.png" alt="">
+        <ion-label>Nicolas López</ion-label>
+      </ion-item>
+      
+    </ion-list>
+  </div>
+</ion-content>

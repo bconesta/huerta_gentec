@@ -53,7 +53,16 @@ const routes: Routes = [
   {
     path: 'grilla',
     loadChildren: () => import('./grilla/grilla.module').then( m => m.GrillaPageModule)
+  },
+  {
+    path: 'datos',
+    loadChildren: () => import('./settingspages/datos/datos.module').then( m => m.DatosPageModule)
+  },  {
+    path: 'info',
+    loadChildren: () => import('./settingspages/info/info.module').then( m => m.InfoPageModule)
   }
+
+
 
 
 

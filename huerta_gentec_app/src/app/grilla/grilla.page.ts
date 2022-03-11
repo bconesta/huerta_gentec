@@ -1,8 +1,7 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../servicios/auth.service'
 import { Router } from '@angular/router'
-import {onValue} from 'firebase/database'
-import { AngularFireDatabase, snapshotChanges } from '@angular/fire/compat/database';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { LanguageService } from '../servicios/language.service';
 
 @Component({
@@ -15,12 +14,8 @@ export class GrillaPage implements OnInit {
   constructor(
     private authService : AuthService,
     public router : Router,
-    public onValue : AngularFireDatabase,
     public db:AngularFireDatabase,
-    private elementRef: ElementRef,
-    private leng : LanguageService) { 
-      
-  }
+    private leng : LanguageService) {}
 
   change(){
     this.db.database.ref('/Users/' + this.authService.uid + '/ranges/hum').set((document.getElementById('hum') as any).value);
@@ -33,9 +28,7 @@ export class GrillaPage implements OnInit {
   humLabel : string;
   tempLabel : string;
   cantLabel : string;
-  ngOnInit() {
-    
-  }
+  
   ionViewDidEnter(){
     this.db.database.ref('/Users/' + this.authService.uid).on('value', (snapshot)=> {
       (document.getElementById('hum') as any).value = snapshot.val().ranges.hum;
@@ -48,4 +41,6 @@ export class GrillaPage implements OnInit {
     this.tempLabel = this.leng.language[this.leng.value].RangePage.label2;
     this.cantLabel = this.leng.language[this.leng.value].RangePage.label3;
   }
+
+  ngOnInit() {}
 }

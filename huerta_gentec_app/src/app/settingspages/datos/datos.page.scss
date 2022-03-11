@@ -1,0 +1,23 @@
+.toolbar-home {
+    --background:rgb(22, 160, 69);
+    height: 60px;
+    position: relative;
+    display: flex;
+    text-align: center;
+  }
+
+.salir-home{
+    position: absolute;
+    left: 2%;
+    top:25%;
+    ion-button{
+        font-size: 20px;
+        font-family:monospace;
+        font-weight:500;
+    }
+}
+
+.toolbar-logo{
+    margin-top: 5px;
+}
+

@@ -13,9 +13,15 @@ export class AuthService {
   uiduser : any;
   uid : any;
   uidnew : any;
+  email : any;
+  creationTime : any;
+  lastSign : any;
   constructor(private AFauth : AngularFireAuth, private AFD : AngularFireDatabase) {
     AFauth.authState.subscribe(user=>{
       this.uid = user['_delegate']['uid'];
+      this.email = user['_delegate']['email'];
+      this.creationTime = user['_delegate']['metadata']['creationTime'];
+      this.lastSign = user['_delegate']['metadata']['lastSignInTime'];
     })
   }
 
