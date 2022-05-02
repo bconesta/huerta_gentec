@@ -61,6 +61,17 @@ export class LanguageService {
         'label1' : 'E-mail',
         'label2' : 'Creation date',
         'label3' : 'Last log in date'
+      },
+      'TypePage' : {
+        'titulo' : 'Add new planty',
+        'label1' : "Planty's name",
+        'label2' : "Planty's type",
+        'label3' : 'Select',
+        'boton' : 'Next',
+        'toast' : 'Complete all fields to continue :)'
+      },
+      'OptionsPage' : {
+        'titulo' : "Planty's type"
       }
     },
     
@@ -116,6 +127,17 @@ export class LanguageService {
         'label1' : 'Correo electrónico',
         'label2' : 'Fecha de creación',
         'label3' : 'Último inicio de sesión'
+      },
+      'TypePage' : {
+        'titulo' : 'Añadir nueva planta',
+        'label1' : 'Nombre de la planta',
+        'label2' : 'Tipo de planta',
+        'label3' : 'Seleccionar',
+        'boton' : 'Siguiente',
+        'toast' : 'Complete todos los datos para continuar :)'
+      },
+      'OptionsPage' : {
+        'titulo' : 'Tipo de planta'
       }
     }
   }

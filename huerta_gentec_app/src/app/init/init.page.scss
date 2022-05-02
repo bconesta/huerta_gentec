@@ -1,0 +1,13 @@
+.superior{
+    height: 100px;
+    background-color: #29A285;
+}
+.carga{
+    text-align: center;
+    margin-top: 40px;
+    ion-progress-bar{
+        height: 10px;
+        --background: #29a2863d;
+        --progress-background: #29A285;
+    }
+}

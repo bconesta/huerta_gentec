@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { LanguageService } from 'src/app/servicios/language.service';
 
 @Component({
   selector: 'app-options',
@@ -8,7 +9,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class OptionsPage implements OnInit {
 
-  constructor(public modalController : ModalController) { }
+  constructor(public modalController : ModalController, public leng : LanguageService) { }
   selectCactus(){
     this.modalController.dismiss({
       'dismissed': true,
@@ -28,6 +29,13 @@ export class OptionsPage implements OnInit {
       'dismissed': true,
     });
   }
+
+  tittle : string;
+
+  ionViewDidEnter(){
+    this.tittle = this.leng.language[this.leng.value].OptionsPage.titulo;
+  }
+
   ngOnInit() {
   }
 

@@ -6,9 +6,11 @@ import { BluetoothSerial } from '@ionic-native/bluetooth-serial/ngx';
 import { AuthService } from 'src/app/servicios/auth.service';
 import { WifiWizard2 } from '@ionic-native/wifi-wizard-2/ngx';
 import { AlertController, LoadingController } from '@ionic/angular';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 var found = false;
-var mac = "-"
+var eee = false;
+var mac = "-";
 var uid = "-";
 var objpru = [{
     'SSID' : "Fw-peql 2.4GHz",
@@ -42,7 +44,8 @@ export class ConnectionPage implements OnInit {
     private router : Router,
     private passData : PassDataService,
     public loadingController: LoadingController,
-    public alertController : AlertController) { 
+    public alertController : AlertController,
+    public db : AngularFireDatabase) { 
     
   }
   back(){
@@ -54,18 +57,21 @@ export class ConnectionPage implements OnInit {
     //console.log(this.obje['type'])
   }
   opbt(){
-    //this.openNativeSettings.open("bluetooth");
-    this.presentLoading();
+    this.openNativeSettings.open("bluetooth");
   }
   next(){
     this.SerialBT.list().then(function(devices) {
       devices.forEach(function(device) {
+        eee=true;
         if(device.name == "MiPlanty"){
           found = true;
           mac = device.id;
         }
       })
     });
+    if(eee == true){
+      this.presentLoading();
+    }
     if(found == true){
       this.SerialBT.connect(mac).subscribe(success=>{
         this.SerialBT.write("SSID");
@@ -73,11 +79,12 @@ export class ConnectionPage implements OnInit {
         (document.getElementById("boton_sig") as any).style = "display: none;";
         (document.getElementById("wifi-scan") as any).style = "display: block;";
         this.scannerWifi();
-        alert("CONECTADO")
+        this.loadingController.dismiss();
+        this.presentAlert("¡Listo!", "Se ha conectado correctamente");
       }, error=>{});
       
     }
-    else{alert("No encontrado"); this.scannerWifi();}
+    else{this.scannerWifi();}
     this.scannerWifi();
   }
 
@@ -160,6 +167,7 @@ export class ConnectionPage implements OnInit {
   }
 
   ngOnInit() {
+    this.next();
   }
 
 }

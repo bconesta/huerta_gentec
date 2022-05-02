@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./init/init.module').then( m => m.InitPageModule)
   },
   {
     path: 'login',
@@ -57,9 +57,14 @@ const routes: Routes = [
   {
     path: 'datos',
     loadChildren: () => import('./settingspages/datos/datos.module').then( m => m.DatosPageModule)
-  },  {
+  },
+  {
     path: 'info',
     loadChildren: () => import('./settingspages/info/info.module').then( m => m.InfoPageModule)
+  },
+  {
+    path: 'init',
+    loadChildren: () => import('./init/init.module').then( m => m.InitPageModule)
   }
 
 

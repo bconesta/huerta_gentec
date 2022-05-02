@@ -2,6 +2,7 @@
     --background:rgb(22, 160, 69);
     height: 60px;
     position: relative;
+    text-align: center;
   }
 
 .salir-home{
@@ -16,9 +17,7 @@
 }
 
 .toolbar-logo{
-    position: absolute;
-    top:10%;
-    left:40%;
+    margin-top: 5px;
 }
 
 .toolbar-mas{
